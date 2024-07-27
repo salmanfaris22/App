@@ -42,7 +42,7 @@ const UpdateBlog = ({ color }) => {
     <div className="h-[100vh]" style={{ background: color.body }}>
       <div className="h-[100px]">
         <Link>
-          <Link to={`/update/${id}`}>
+          <Link to={`/read/${id}`}>
             <button
               style={{ background: color.sub, color: color.text }}
               className="p-3 ml-3 mt-3"
@@ -73,7 +73,7 @@ const UpdateBlog = ({ color }) => {
                 onChange={handlevalueChange}
                 placeholder="enterheading"
                 style={{ background: color.text, color: color.body }}
-                className=" mt-2 shadow shadow-black w-[40vw] h-[50px] pl-4 "
+                className=" mt-2 shadow shadow-black md:w-[40vw] w-[80vw] h-[50px] pl-4 "
               />
             </div>
             <div>
@@ -87,7 +87,7 @@ const UpdateBlog = ({ color }) => {
                 value={data.body}
                 placeholder="textyourBlog"
                 style={{ background: color.body, color: color.text }}
-                className=" mt-5 shadow-black shadow h-[50vh] w-[40vw] p-5"
+                className=" mt-5 shadow-black shadow h-[50vh] md:w-[40vw] w-[80vw] p-5"
               ></textarea>
             </div>
             <div className="flex justify-end w-[40vw]">

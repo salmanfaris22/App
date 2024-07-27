@@ -9,14 +9,14 @@ import { useState } from 'react';
 
 function App() {
   const [color, setColor] = useState({
-    body: "#EBE9E1",
-    text: "#E43D12",
-    sub: "#EFB11D"
+    body: "white",
+    text: "#1D63FF",
+    sub: "#FFCE32"
 })
   return (
     <div className="font-thin">
    <Routes>
-    <Route path='/' element={<LogIn color={color}/>}/>
+    <Route path='/' element={<LogIn color={color} setColor={setColor}/>}/>
     <Route path='/addblog' element={<AddBlog color={color} />}/>
     <Route path='update/:id' element={<UpdateBlog color={color}/>}/>
     <Route path='read/:id' element={<BlogRead color={color}/>}/>

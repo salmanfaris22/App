@@ -45,13 +45,8 @@ const BlogRead = ({ color }) => {
         </Link>
       </div>
 
-      <div className="flex flex-col w-[90%] h-[70vh] ml-auto mr-auto shadow-sm shadow-black ">
-        <div
-          className="h-[100px] flex items-center text-2xl font-bold pl-6 justify-between"
-          style={{ color: color.text }}
-        >
-          {data.titile}
-          <div className="flex justify-end">
+      <div className="flex flex-col w-[90%] h-[70vh] ml-auto mr-auto shadow-sm shadow-black border border-white ">
+      <div className="flex justify-end ">
             <Link to={`/update/${id}`}>
               <button
                 style={{ background: color.sub, color: color.text }}
@@ -72,9 +67,17 @@ const BlogRead = ({ color }) => {
               Delit
             </button>
           </div>
+        <div
+          className="h-[100px] flex items-center text-2xl font-bold pl-6 justify-between"
+          style={{ color: color.text }}
+        >
+          {data.titile}
+         
         </div>
 
-        <div className="pl-20 overflow-auto">{data.body}</div>
+        <div className="pl-20 overflow-auto"
+        style={{color:color.sub}}
+        >{data.body}</div>
       </div>
     </div>
   );

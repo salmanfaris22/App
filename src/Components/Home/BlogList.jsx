@@ -5,7 +5,7 @@ const BlogList = ({ blogs, handleDelet, navigater, color }) => {
   return (
     <div
       style={{ background: color.body }}
-      className="min-h-[100vh] grid grid-flow-row grid-cols-4 overflow-hidden"
+      className="min-h-[100vh] grid grid-flow-row mt-8 md:mt-0 md:grid-cols-4 overflow-hidden"
     >
       {blogs.map((e, i) => {
         return (

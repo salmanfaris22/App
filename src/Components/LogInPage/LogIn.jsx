@@ -90,7 +90,7 @@ const LogIn = ({color,setColor}) => {
 
                
                     <Routes>
-                        <Route path='/' element={<Home color={color} handlelogOut={handlelogOut}   username={names.username}/>} />
+                        <Route path='/' element={<Home setColor={setColor} color={color} handlelogOut={handlelogOut}   username={names.username}/>} />
                     </Routes>
                    // {/* <div>{names.username}</div>
                    // <button onClick={handlelogOut}>LogOut</button> */}
@@ -98,10 +98,16 @@ const LogIn = ({color,setColor}) => {
              
 
                 :
-                <div className='h-[80vh] w-[70vw]  rounded-2xl grid grid-cols-2 shadow-black shadow-md place-items-center'>
-                    <div className='w-[100%] flex flex-col  h-[100%] items-center  '>
-                        <div className=' h-[30%] text-center flex justify-center items-center font-bold text-2xl'>
+                <div className='h-[80vh] w-[70vw]  bg-white rounded-2xl grid md:grid-cols-2 shadow-black shadow-md place-items-center'>
+                    <div className='w-[100%] flex flex-col   h-[100%] items-center  '>
+                        <div className=' h-[20%] text-center flex justify-center flex-col items-center font-bold text-2xl'
+                         style={{color:color.text}}
+                        >
+                            Exploring Ideas, Sharing Insights <br/> 
+                            <span style={{color:color.sub}}>
                             LogIn My Blog
+                            </span>
+                           
                         </div>
                         <form onSubmit={handleSubmit} className='w-[100%] flex flex-col items-center justify-center gap-7' >
 
@@ -110,7 +116,6 @@ const LogIn = ({color,setColor}) => {
                                     onChange={handleChange}
                                     value={formValues.username}
                                     name='username'
-
                                     className='border p-2 rounded-xl w-[50%] shadow-black  shadow-sm  pl-3 ' />
                                 <p className='text-red-600 text-[12px]'>{formErrors.username}</p>
 
@@ -121,7 +126,7 @@ const LogIn = ({color,setColor}) => {
                                     onChange={handleChange}
                                     value={formValues.email}
                                     name='email'
-
+                                  
                                     className='border p-2 rounded-xl w-[50%] shadow-black  shadow-sm  pl-3 ' />
                                 <p className='text-red-600 text-[12px]'>{formErrors.email}</p>
 
@@ -131,17 +136,20 @@ const LogIn = ({color,setColor}) => {
                                 <input type="password" placeholder='Password'
                                     onChange={handleChange}
                                     value={formValues.password}
+                           
                                     name='password'
                                     className='border p-2 rounded-xl w-[50%] shadow-black shadow-sm pl-3 ' />
                                 <p className='text-red-600 text-[12px]'>{formErrors.password}</p>
 
                             </div>
                             <div>
-                                <button className='p-2 shadow-black shadow-sm rounded-lg w-36'>LogIn</button>
+                                <button className='p-2 shadow-black shadow-sm rounded-lg w-36'
+                                 style={{background:color.text,color:color.body}}
+                                >LogIn</button>
                             </div>
                         </form>
                     </div>
-                    <div className=' h-[100%]'>
+                    <div className=' h-[100%] md:block hidden'>
                         <img src={Img} alt="" className='bg-cover h-[100%]' />
                     </div>
                 </div>}

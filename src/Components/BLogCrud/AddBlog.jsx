@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const AddBlog = ({ color }) => {
   const navigate = useNavigate();
@@ -29,24 +30,28 @@ const AddBlog = ({ color }) => {
   };
 
   return (
-    <div>
-      AddBlog
+    <div style={{background:color.body}} className="h-[100vh]">
+     
       <div className="h-[100px]">
-        <button
-          style={{ background: color.sub, color: color.text }}
-          className="p-3 ml-3 mt-3 "
-        >
-          Back
-        </button>
-        <button
-          style={{ background: color.text, color: color.body }}
-          className="p-3 ml-3 mt-3 "
-        >
-          Home
-        </button>
+      <Link to="/">
+          <button
+            style={{ background: color.sub, color: color.text }}
+            className="p-3 ml-3 mt-3 "
+          >
+            Back
+          </button>
+        </Link>
+        <Link to="/">
+          <button
+            style={{ background: color.text, color: color.body }}
+            className="p-3 ml-3 mt-3 "
+          >
+            Home
+          </button>
+        </Link>
       </div>
       <div className="m-auto w-[80vw]">
-        <div className="">update Your BLog</div>
+        <div className="">update Your Blog</div>
         <div>
           <form onSubmit={handleSubmit}>
             <div>

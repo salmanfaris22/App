@@ -8,7 +8,7 @@ import Navbar from '../Navbar.jsx/Navbar'
 
 export const ColorsContext = createContext() 
 
-const Home = ({color, handlelogOut, username }) => {
+const Home = ({setColor,color, handlelogOut, username }) => {
 
 
     const [blogs, setBlogs] = useState([])
@@ -33,7 +33,7 @@ const Home = ({color, handlelogOut, username }) => {
     }
     return (
         <div className='h-[100vh] w-[100vw] font-thin' style={{ background: color.body }}>
-            <Navbar color={color} username={username} handlelogOut={handlelogOut}/>
+            <Navbar setColor={setColor} color={color} username={username} handlelogOut={handlelogOut}/>
             {/* <div className='flex justify-between w-[80%] m-auto  h-[80px]  text-3xl font-thin text-center items-center'>
 
                 <div
@@ -58,7 +58,7 @@ const Home = ({color, handlelogOut, username }) => {
             </div> */}
 
 
-            <div className=' text-center h-[70%]   grid grid-cols-2 place-items-center'>
+            <div className=' text-center h-[70%]   grid md:grid-cols-2 place-items-center'>
                 <div className='h-[100%] flex justify-center items-center'>
                     <img src={ImageBg} alt="" className='h-[70%]' />
                 </div>
