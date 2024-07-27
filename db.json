@@ -8,11 +8,6 @@
     {
       "titile": "my Name is ustab",
       "body": "Hello, my name is ustab. I'm glad to introduce myself through this post. I am passionate about many things, including technology and learning. I enjoy exploring new ideas and sharing my experiences with others. Writing allows me to express my thoughts and connect with people who have similar interests. This is a great platform to engage in meaningful conversations and to learn from one another. I hope to contribute valuable insights and also gain knowledge from this community.",
-      "id": 3
-    },
-    {
-      "titile": "my Name is ustab",
-      "body": "Hello, my name is ustab. I'm glad to introduce myself through this post. I am passionate about many things, including technology and learning. I enjoy exploring new ideas and sharing my experiences with others. Writing allows me to express my thoughts and connect with people who have similar interests. This is a great platform to engage in meaningful conversations and to learn from one another. I hope to contribute valuable insights and also gain knowledge from this community.",
       "id": 4
     },
     {
@@ -169,6 +164,11 @@
       "titile": "fsdfsdf",
       "body": "sdfsdf",
       "id": 35
+    },
+    {
+      "titile": "salman poomon",
+      "body": "",
+      "id": 36
     }
   ]
 }

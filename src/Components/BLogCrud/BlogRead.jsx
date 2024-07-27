@@ -26,9 +26,7 @@ const BlogRead = ({ color }) => {
 
   return (
     <div 
-    data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500"
+    
     className="flex h-[100vh] flex-col" style={{ background: color.body }}>
       <div className="h-[100px]">
         <Link to="/">
