@@ -24,8 +24,8 @@ const UpdateBlog = ({ color }) => {
     axios
       .put("http://localhost:3000/blog/" + id, data)
       .then((res) => {
-        alert("succe");
-        navigate("/");
+       
+        navigate(`/`);
       })
       .catch((e) => {
         console.log("error when updata");

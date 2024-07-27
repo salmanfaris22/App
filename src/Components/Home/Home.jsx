@@ -34,33 +34,12 @@ const Home = ({setColor,color, handlelogOut, username }) => {
     return (
         <div className='h-[100vh] w-[100vw] font-thin' style={{ background: color.body }}>
             <Navbar setColor={setColor} color={color} username={username} handlelogOut={handlelogOut}/>
-            {/* <div className='flex justify-between w-[80%] m-auto  h-[80px]  text-3xl font-thin text-center items-center'>
-
-                <div
-                    style={{ color: color.text }}
-                    className=''>
-                    Welcome  <span
-                        style={{ color: color.sub }}
-                        className=' font-bold'>{username} </span>
-
-                </div>
-                <div className='flex gap-2'>
-                    <button onClick={handlelogOut}
-                        style={{ color: color.body, background: color.text }}
-                        className=' p-3 '>LogOut</button>
-
-                    <button
-                        style={{ color: color.body, background: color.sub }}
-                        className=' p-3 '>ChangeThem</button>
-                </div>
-
-
-            </div> */}
+           
 
 
             <div className=' text-center h-[70%]   grid md:grid-cols-2 place-items-center'>
                 <div className='h-[100%] flex justify-center items-center'>
-                    <img src={ImageBg} alt="" className='h-[70%]' />
+                    <img data-aos="fade-right" src={ImageBg} alt="" className='h-[70%]' />
                 </div>
                 <div className='h-[100%] flex flex-col justify-center items-center gap-4'>
                     <div className='flex font-bold text-6xl ' 
@@ -84,43 +63,7 @@ const Home = ({setColor,color, handlelogOut, username }) => {
     <BlogList blogs={blogs} handleDelet={handleDelet} navigater={navigater} color={color}/>
     </ColorsContext.Provider>
             
-            {/* <div>
-                {blogs.map((e, i) => {
-                    return (
-                        <div key={i} className='flex flex-col mt-8'>
-                            <div>
-                                <div className='font-bold'>
-                                    {e.titile}
-                                </div>
-                                <div className='text-blue-500'>
-                                    {e.body}
-                                </div>
-                                <div>
-
-                                    <img src={e.img} alt="" />
-
-                                </div>
-                            </div>
-
-
-
-
-                            <div className=''>
-
-
-                                <button className='ml-8 bg-blue-300' onClick={() => {
-                                    handleDelet(e.id)
-                                    navigater('/update')
-                                }}>delet</button>
-                                <Link to={`/update/${e.id}`}>
-                                    <button className='bg-red-400'>updat</button>
-                                </Link>
-                            </div>
-
-                        </div>
-                    )
-                })}
-            </div> */}
+          
 
 
 

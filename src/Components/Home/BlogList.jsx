@@ -11,7 +11,7 @@ const BlogList = ({ blogs, handleDelet, navigater, color }) => {
         return (
           <div
             key={i}
-            className="flex flex-col mt-8 w-[90%] m-auto h-[400px] p-7  shadow-sm"
+            className="flex flex-col mt-8 w-[90%] m-auto h-[400px] p-7  shadow-sm overflow-hidden"
             style={{ boxShadow: `1px 3px 2px ${color.text}` }}
           >
             <div

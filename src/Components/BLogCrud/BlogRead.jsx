@@ -64,7 +64,7 @@ const BlogRead = ({ color }) => {
                 // navigater('/update')
               }}
             >
-              Delit
+              Delete
             </button>
           </div>
         <div
