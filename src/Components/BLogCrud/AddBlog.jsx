@@ -38,7 +38,11 @@ const AddBlog = ({ color }) => {
   };
 
   return (
-    <div style={{background:color.body}} className="h-[100vh]">
+    <div 
+    data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
+    style={{background:color.body}} className="h-[100vh]">
      
       <div className="h-[100px]">
       <Link to="/">

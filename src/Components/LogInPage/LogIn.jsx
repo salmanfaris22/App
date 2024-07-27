@@ -82,7 +82,11 @@ const LogIn = ({color,setColor}) => {
     }
 
     return (
-        <div className='flex justify-center items-center h-[100vh] '
+        <div 
+        data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
+        className='flex justify-center items-center h-[100vh] '
         style={{background:color.body}}
         >
             {localStorage.getItem("id") ?

@@ -10,6 +10,7 @@ const BlogList = ({ blogs, handleDelet, navigater, color }) => {
       {blogs.map((e, i) => {
         return (
           <div
+          data-aos="zoom-in-up"
             key={i}
             className="flex flex-col mt-8 w-[90%] m-auto h-[400px] p-7  shadow-sm overflow-hidden"
             style={{ boxShadow: `1px 3px 2px ${color.text}` }}
@@ -33,18 +34,7 @@ const BlogList = ({ blogs, handleDelet, navigater, color }) => {
                   </button>
                 </Link>
               </div>
-              {/* <button
-                className="ml-8 bg-blue-300"
-                onClick={() => {
-                  handleDelet(e.id);
-                  navigater("/update");
-                }}
-              >
-                delet
-              </button>
-              <Link to={`/update/${e.id}`}>
-                <button className="bg-red-400">updat</button>
-              </Link> */}
+        
             </div>
           </div>
         );

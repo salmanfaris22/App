@@ -4,7 +4,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import ImageBg from '../../assets/Home-img.png'
 import BlogList from './BlogList'
 import Navbar from '../Navbar.jsx/Navbar'
-
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 
 export const ColorsContext = createContext() 
 
@@ -14,6 +15,9 @@ const Home = ({setColor,color, handlelogOut, username }) => {
     const [blogs, setBlogs] = useState([])
   
     
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
 
     const navigater = useNavigate()
     useEffect(() => {
@@ -37,11 +41,11 @@ const Home = ({setColor,color, handlelogOut, username }) => {
            
 
 
-            <div className=' text-center h-[70%]   grid md:grid-cols-2 place-items-center'>
-                <div className='h-[100%] flex justify-center items-center'>
-                    <img data-aos="fade-right" src={ImageBg} alt="" className='h-[70%]' />
+            <div  className=' text-center h-[70%]   grid md:grid-cols-2 place-items-center'>
+                <div data-aos="zoom-in-up" className='h-[100%] flex justify-center items-center'>
+                    <img  src={ImageBg} alt="" className='h-[70%]' />
                 </div>
-                <div className='h-[100%] flex flex-col justify-center items-center gap-4'>
+                <div data-aos="zoom-in-up" className='h-[100%] flex flex-col justify-center items-center gap-4'>
                     <div className='flex font-bold text-6xl ' 
                     style={{color:color.text}}>
                         Exploring Ideas, Sharing Knowledge 

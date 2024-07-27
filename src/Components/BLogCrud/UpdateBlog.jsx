@@ -39,7 +39,11 @@ const UpdateBlog = ({ color }) => {
     });
   };
   return (
-    <div className="h-[100vh]" style={{ background: color.body }}>
+    <div 
+    data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
+    className="h-[100vh]" style={{ background: color.body }}>
       <div className="h-[100px]">
         <Link>
           <Link to={`/read/${id}`}>
