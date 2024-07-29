@@ -25,6 +25,8 @@ const BlogList = ({ blogs, handleDelet, navigater, color }) => {
 
             <div className="">
               <div className="flex  justify-end">
+
+                {/* Read more Button */}
                 <Link to={`/read/${e.id}`} color={color}>
                   <button
                     className="p-2"

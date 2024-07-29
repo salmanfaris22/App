@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { useNavigate, useParams } from "react-router";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import { ApiResposce } from "../../App";
 const BlogRead = ({ color }) => {
+  const API = useContext(ApiResposce)
   const { id } = useParams();
   const [data, setDat] = useState([]);
   const navGation = useNavigate();
@@ -20,7 +21,7 @@ const BlogRead = ({ color }) => {
   }, []);
 
   const handleDelet = (id) => {
-    axios.delete("http://localhost:3000/blog/" + id);
+    axios.delete(API + id);
     navGation("/");
   };
 

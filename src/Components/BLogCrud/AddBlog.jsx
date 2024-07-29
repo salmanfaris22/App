@@ -1,10 +1,11 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-
+import { ApiResposce } from "../../App";
 const AddBlog = ({ color }) => {
   const navigate = useNavigate();
+  const API = useContext(ApiResposce)
 
   const [cheack , setCheack] =useState({})
   const [inputBlog, setInputBlog] = useState({
@@ -26,7 +27,7 @@ const AddBlog = ({ color }) => {
     e.preventDefault();
   if(Object.keys(cheack).length !== 0){
     axios
-    .post("http://localhost:3000/blog", inputBlog)
+    .post(API, inputBlog)
     .then((res) => navigate("/"))
     .catch((err) => {
       console.log("errro", err);

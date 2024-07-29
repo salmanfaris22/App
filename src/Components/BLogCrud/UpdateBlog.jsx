@@ -1,16 +1,22 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { Link } from "react-router-dom";
+import { ApiResposce } from "../../App";
+
+
+
+
 
 const UpdateBlog = ({ color }) => {
+  const API = useContext(ApiResposce)
   const { id } = useParams();
   const [data, setDat] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/blog/" + id)
+      .get(API + id)
       .then((e) => {
         setDat(e.data);
       })
@@ -22,7 +28,7 @@ const UpdateBlog = ({ color }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:3000/blog/" + id, data)
+      .put(API + id, data)
       .then((res) => {
        
         navigate(`/`);
@@ -38,6 +44,12 @@ const UpdateBlog = ({ color }) => {
       [e.target.name]: e.target.value,
     });
   };
+
+
+
+
+
+  
   return (
     <div 
     
