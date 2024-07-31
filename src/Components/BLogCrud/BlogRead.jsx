@@ -4,6 +4,11 @@ import { useNavigate, useParams } from "react-router";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { ApiResposce } from "../../App";
+
+
+
+
+
 const BlogRead = ({ color }) => {
   const API = useContext(ApiResposce)
   const { id } = useParams();
@@ -11,7 +16,7 @@ const BlogRead = ({ color }) => {
   const navGation = useNavigate();
   useEffect(() => {
     axios
-      .get("http://localhost:3000/blog/" + id)
+      .get(API + id)
       .then((e) => {
         setDat(e.data);
       })
@@ -30,6 +35,7 @@ const BlogRead = ({ color }) => {
     
     className="flex h-[100vh] flex-col" style={{ background: color.body }}>
       <div className="h-[100px]">
+
         <Link to="/">
           <button
             style={{ background: color.sub, color: color.text }}
@@ -50,6 +56,7 @@ const BlogRead = ({ color }) => {
 
       <div className="flex flex-col w-[90%] h-[70vh] ml-auto mr-auto shadow-sm shadow-black border border-white ">
       <div className="flex justify-end ">
+        {/* EDIT and DELETE buttons */}
             <Link to={`/update/${id}`}>
               <button
                 style={{ background: color.sub, color: color.text }}

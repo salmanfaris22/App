@@ -3,16 +3,20 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import { ApiResposce } from "../../App";
+
+
+
+
 const AddBlog = ({ color }) => {
   const navigate = useNavigate();
   const API = useContext(ApiResposce)
 
-  const [cheack , setCheack] =useState({})
+  const [cheack , setCheack] =useState({})   
   const [inputBlog, setInputBlog] = useState({
     titile: "",
     body: "",
   });
-
+//onChange
   const handlechange = (e) => {
     setCheack({
         [e.target.name]: e.target.value,
@@ -23,12 +27,13 @@ const AddBlog = ({ color }) => {
     });
   };
 
+  // Submiting
   const handleSubmit = (e) => {
     e.preventDefault();
   if(Object.keys(cheack).length !== 0){
     axios
     .post(API, inputBlog)
-    .then((res) => navigate("/"))
+    .then((res) => navigate(-1))
     .catch((err) => {
       console.log("errro", err);
     })
@@ -38,10 +43,14 @@ const AddBlog = ({ color }) => {
    
   };
 
+
+
+
   return (
     <div style={{background:color.body}} className="h-[100vh]">
      
       <div className="h-[100px]">
+      {/* BUTTONS */}
       <Link to="/">
           <button
             style={{ background: color.sub, color: color.text }}

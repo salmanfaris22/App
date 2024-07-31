@@ -13,16 +13,14 @@ const LogIn = ({color,setColor}) => {
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
 
+
     const handleChange = (e) => {
         setFormValues({
             ...formValues,
             [e.target.name]: e.target.value
         })
     }
-
-
-
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         setFormErrors(validate(formValues));
@@ -65,7 +63,7 @@ const LogIn = ({color,setColor}) => {
             errors.password = "Password is required";
         } else if (values.password.length < 4) {
             errors.password = "Password must be more than 4 characters";
-        } else if (values.password.length > 10) {
+        } else if (values.password.length > 20) {
             errors.password = "Password cannot exceed more than 10 characters";
         }
         return errors;
@@ -83,9 +81,7 @@ const LogIn = ({color,setColor}) => {
 
     return (
         <div 
-        data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500"
+ 
         className='flex justify-center items-center h-[100vh] '
         style={{background:color.body}}
         >
